@@ -22,7 +22,7 @@ pipeline {
 	} 
 	post {
 		always{
-			echo 'I am awesome'
+			echo 'I am awesome, I know Jenkins'
 		}
 		success {
 			echo 'When sucessful'

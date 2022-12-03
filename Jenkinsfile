@@ -22,13 +22,13 @@ pipeline {
 		}
 		stage ('Compile'){
 			steps {
-				sh "mvn clean compile"
+				sh "mvn clean compile" //downloads dependemncies and compile your code
 			}
 
 		}
 		stage('Test'){
 			steps {
-				sh "mvn Test"
+				sh "mvn test"  // run your unit test
 			}
 		}
 		stage('IntegrationTest'){

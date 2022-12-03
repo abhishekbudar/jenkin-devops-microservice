@@ -5,11 +5,10 @@ pipeline {
 	agent any
 	//agent { docker {image 'maven:3.6.3'}}
 
-	env {
-		dockerHome = tool 'myDocker'
-		mavenHome = tool 'myMaven'
-		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
-	}
+	environment {
+        bar = "bar"
+        FOO = credentials('FOO_CREDENTIALS')
+    }
 	stages {
 		stage('Build'){
 			steps {
